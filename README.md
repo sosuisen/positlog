@@ -8,14 +8,14 @@ Enjoy it at http://positlog.org/en/
 ## System Requirements
 
 * Server Side
- - Perl 5.8+
+ ** Perl 5.8+
 
 * Browser Compatibility
 
- - InternetExplorer 6, 7
- - Firefox 2.0+
- - Opera 9.2+
- - Safari 2.02+, Safari 3(Mac), iPod touch(Browse only)
+ ** InternetExplorer 6, 7
+ ** Firefox 2.0+
+ ** Opera 9.2+
+ ** Safari 2.02+, Safari 3(Mac), iPod touch(Browse only)
 
  Optional Requirements
   Java Plug-in 1.5+ for dragging and dropping files from desktop to PositLog
