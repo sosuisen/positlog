@@ -1,0 +1,86 @@
+/* -----------------------------------------------
+  adminnavi.css
+  This file is part of PositLog.
+----------------------------------------------- */
+
+A:link,A:visited { color:#006000;}
+A:hover {color:#00ff00;}
+A:active {color:#ff0000;}
+
+body{
+		padding-top: 20px;
+		background-color: #EFECDE;
+}
+
+.navigator1{
+		font-size: 14px;
+		color: #000000;
+ 		background-color: #FFFCEE;
+		border-width: 1px 3px 1px 3px;
+		border-color: #6F6C5E;
+		border-style: solid;
+		padding: 3px 3px 3px 7px;
+		margin: 0px;
+		width: 136px;
+}
+
+.navigator1_user{
+		font-size: 14px;
+		color: #000000;
+ 		background-color: #FFFCEE;
+		border-width: 0px 0px 1px 3px;
+		border-color: #705050;
+		border-style: solid;
+		padding: 3px 3px 3px 7px;
+		margin: 0px;
+		width: 138px;
+}
+
+.navigator1_page{
+		font-size: 14px;
+		color: #000000;
+ 		background-color: #FFFCEE;
+		border-width: 0px 0px 1px 3px;
+		border-color: #505070;
+		border-style: solid;
+		padding: 3px 3px 3px 7px;
+		margin: 0px;
+		width: 138px;
+}
+
+.navigator2_user{
+		font-size: 14px;
+		border-right: 3px solid #705050;
+		border-bottom: 1px solid #705050;
+		text-align: right;
+		color: #000000;
+		padding: 3px 10px 3px 10px;
+		margin: 0px 0px 0px 22px;
+		width: 106px;
+}
+
+.navigator2_page{
+		font-size: 14px;
+		border-right: 3px solid #505070;
+		border-bottom: 1px solid #505070;
+		text-align: right;
+		color: #000000;
+		padding: 3px 10px 3px 10px;
+		margin: 0px 0px 0px 22px;
+		width: 106px;
+}
+
+#copyright{ 
+		padding-left: 3px;
+		font-style: italic;
+		clear: left;
+		width: 136px;
+}
+
+#copyright2{
+		margin:0px;
+		padding-right: 3px;
+		text-align: right;
+		font-style: italic;
+		width: 136px;
+}

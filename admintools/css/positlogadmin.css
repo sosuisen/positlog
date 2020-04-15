@@ -1,0 +1,571 @@
+/* -----------------------------------------------
+  positlogadmin.css
+  This file is part of PositLog.
+ ----------------------------------------------- */
+
+A:link,A:visited { color:#006000;}
+A:hover {color:#00ff00;}
+A:active {color:#ff0000;}
+
+body.admin{
+  width: 99%;
+	padding-top: 20px;
+  background-color: #FFFCEE;
+}
+
+h1.header{ 
+  font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+ 	background-color: #FFFFFF;
+	border-width: 1px 3px 1px 3px;
+	border-color: #6F6C5E;
+	border-style: solid;
+	margin: 3px 7px 3px 7px;
+  padding: 3px 7px 3px 7px;
+  clear: left;
+}
+
+h1.recent{
+	font-size: 150%;
+	font-weight: normal;
+	background-color: #DFDCCE;
+	margin: 0px;
+	padding: 7px;
+}
+
+h2.header{ 
+  font-size: 14px;
+	font-weight: normal;
+ 	background-color: #FFFFFF;
+	border-width: 1px 3px 1px 3px;
+	border-color: #6F6C5E;
+	border-style: solid;
+	margin: 17px 7px 3px 7px;
+  padding: 3px 7px 3px 7px;
+  clear: left;
+}
+
+h3.header{ 
+  font-size: 12px;
+	font-weight: normal;
+  border-bottom: 1px solid #000000;
+	margin: 17px 7px 3px 7px;
+  padding: 4px;
+  clear: left;
+}
+
+h4.header{ 
+  font-size: 12px;
+	font-weight: normal;
+  border-bottom: 1px solid #000000;
+	margin: 3px 7px 3px 17px;
+  padding: 4px;
+  clear: left;
+}
+
+span.usernamearea{ 
+  font-size:12px;
+	margin: 3px 7px 3px 17px;
+}
+
+.propertyline{ 
+  font-size: 12px;
+	margin: 0px 7px 0px 17px;
+  padding: 5px 4px 3px 4px;
+  clear: left;
+	overflow: hidden;
+}
+
+.propertyline1{ 
+  font-size: 12px;
+  background-color: #ffffff;
+  border: 1px solid #a0a0a0;
+	margin: 0px 7px 0px 17px;
+  padding: 5px 4px 3px 4px;
+  width: 700px;
+	overflow: hidden;
+}
+
+.propertyheader{
+  margin-right: 5px;
+  text-align: left;
+  float: left;
+  padding: 0px;
+  width: 200px;
+}				
+
+.propertyconetnts{
+  margin-right: 5px;
+  text-align: left;
+  float: left;
+  padding: 0px;
+}				
+
+
+.propertyline2{ 
+  font-size: 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #a0a0a0;
+	margin: 0px 7px 0px 17px;
+  padding: 5px 4px 3px 4px;
+  width: 700px;
+	overflow: hidden;
+}
+
+
+.itemline_header{ 
+  font-size: 12px;
+  border-color: #a0a0a0;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	margin: 3px 7px 3px 17px;
+  padding: 5px 4px 3px 4px;
+  width: 870px;
+	overflow: hidden;
+}
+
+.itemline1{ 
+  font-size: 12px;
+  border-color: #a0a0a0;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	margin: 0px 7px 0px 17px;
+  padding: 5px 4px 3px 4px;
+  width: 800px;
+	overflow: hidden;
+}
+
+.itemline2{ 
+  font-size: 12px;
+  border-color: #a0a0a0;
+	background-color: #EFECDE;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	margin: 0px 7px 0px 17px;
+  padding: 5px 4px 3px 4px;
+  width: 800px;
+	overflow: hidden;
+}
+
+div.number{
+  margin-right: 20px;
+  float: left; 
+  padding: 0px;
+  width: 60px;
+}
+
+div.groupname{ 
+  margin-right: 5px;
+  float: left;
+  padding: 0px;
+  width: 300px;
+}
+
+div.groupid{
+  margin-right: 20px;
+  float: left;
+  padding: 0px;
+  width: 80px;
+}
+
+div.deletecheck{
+  margin-right: 5px;
+  float: left;
+  padding: 0px;
+  width: 70px;
+	height: 20px;
+  vertical-align: baseline;
+}
+
+.newbtn{
+	margin: 0px 5px 0px 17px;
+  text-align: center;
+  float: left;
+  padding: 0px;
+  width: 160px;
+}
+
+
+.statusarea{
+  color: red;
+	margin: 3px 7px 3px 17px;
+}
+
+#howtotext{
+	margin: 0px 0px 0px 37px;
+	clear: left;
+  font-size: 12px;
+}
+
+#form_changenickname{
+	margin: 0px 0px 0px 20px;
+}
+
+#form_changepassword{
+	margin: 0px 0px 0px 20px;
+}
+
+#form_changeusergroupname{
+	margin: 0px 0px 0px 20px;
+}
+
+/* User manager */
+
+h1.usermanagement{ 
+  font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+ 	background-color: #FFFFFF;
+	border-width: 1px 3px 1px 3px;
+	border-color: #705050;
+	border-style: solid;
+	margin: 3px 7px 3px 7px;
+  padding: 3px 7px 3px 7px;
+}
+
+h3.permissionlevel{ 
+  font-size: 12px;
+	font-weight: normal;
+  border-color: #a0a0a0;
+	background-color: #EFECDE;
+	border-style: solid;
+	border-width: 0px 0px 1px 1px;
+	margin: 3px 7px 3px 17px;
+  padding: 5px 4px 3px 4px;
+	width: 90%;
+/*	float: left; */
+}
+
+div.userid{
+  margin-right: 5px;
+  float: left;
+  padding: 0px;
+  width: 150px;
+}
+
+div.nickname{
+  margin-right: 20px;
+  float: left;
+  padding: 0px;
+  width: 200px;
+}
+
+
+.newusername{
+	margin: 0px 5px 0px 17px;
+  text-align: center;
+  float: left;
+  padding: 0px;
+  width: 160px;
+}
+
+.newusernickname{
+	margin: 0px 5px 0px 0px;
+  text-align: center;
+  float: left;
+  padding: 0px;
+  width: 160px;
+}
+
+
+.newuserpass{
+	margin: 0px 5px 0px 17px;
+  text-align: center;
+  float: left;
+  padding: 0px;
+}
+
+#form_adduserstogroup{
+	margin: 0px 3px 0px 17px;
+}
+
+#form_newuser{
+	margin: 5px 0px 0px 0px;
+}
+
+#form_newusergroup{
+	margin: 5px 0px 20px 0px;
+}
+
+.permittedpagelist{
+	margin: 0px 3px 0px 17px;
+  font-size: 12px;
+/*	float:left; */
+}				
+
+#useridlist{
+  width:200px;
+  vertical-align: middle;
+}
+
+.yourpagelist{
+	margin-left: 20px;
+  font-size: 12px;
+}				
+
+/* Page manager */
+
+h1.pagemanagement{ 
+  font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+ 	background-color: #FFFFFF;
+	border-width: 1px 3px 1px 3px;
+	border-color: #505070;
+	border-style: solid;
+	margin: 3px 7px 3px 7px;
+  padding: 3px 7px 3px 7px;
+}
+
+.newpagename{
+	margin: 0px 5px 0px 17px;
+  text-align: center;
+  float: left;
+  padding: 0px;
+  width: 200px;
+  overflow: hidden;
+}
+
+#form_newpage{
+	margin: 5px 0px 20px 0px;
+}
+
+#form_newpagegroup{
+	margin: 5px 0px 20px 0px;
+}
+
+
+.pagename{
+  margin-right: 5px;
+  float: left;
+  padding: 0px;
+  width: 160px;
+  cursor: pointer;
+}
+
+.pageid{
+  margin-right: 5px;
+  float: left;
+  padding: 0px;
+  width: 60px;
+	height: 20px;
+}
+
+.pageauthor{
+  margin-right: 5px;
+  text-align: center;
+  float: left;
+  padding: 0px;
+  width: 120px;
+	height: 20px;
+}
+
+.pageopen{ 
+  text-align: center;
+  width: 30px;
+  padding: 0px;
+  margin-right: 8px;
+  border: 0px solid #b0b0b0;
+  float: left;
+	height: 20px;
+}
+
+.pageedit{ 
+  text-align: center;
+  width: 30px;
+  padding: 0px;
+  margin-right: 8px;
+  border: 0px solid #b0b0b0;
+  float: left;
+	height: 20px;
+}
+
+.changehomebtn{
+  background-color: white;
+  border: 1px solid #a0a0a0;
+	float: left;
+	height: 20px;
+}
+
+.duplicatebtn{
+	margin-right: 5px;
+  background-color: white;
+  border: 1px solid #a0a0a0;
+	float: left;
+	height: 20px;
+}
+
+#form_addpagetogroup{
+	margin: 0px 3px 0px 17px;
+}
+
+#permissionlevel{
+	margin: 0px 0px 0px 17px;
+}
+
+
+.itemline_sheader{ 
+  font-size: 12px;
+  border-color: #a0a0a0;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	margin: 3px 7px 3px 27px;
+  padding: 5px 4px 3px 4px;
+  clear: left;
+	overflow: hidden;
+}
+
+.itemline_s1{ 
+  font-size: 12px;
+  border-color: #a0a0a0;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	margin: 0px 7px 0px 27px;
+  padding: 5px 4px 3px 4px;
+  clear: left;
+	overflow: hidden;
+	height: 20px;
+}
+
+.itemline_s2{ 
+  font-size: 12px;
+  border-color: #a0a0a0;
+	background-color: #F8F5E7;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	margin: 0px 7px 0px 27px;
+  padding: 5px 4px 3px 4px;
+  clear: left;
+	overflow: hidden;
+	height: 20px;
+}
+
+.relatedpages{
+  font-size:12px;
+	margin: 0px 5px 0px 17px;
+  padding: 0px;
+}
+
+.permissionname{
+  margin-right: 5px;
+  text-align: left;
+  float: left;
+  padding: 0px;
+  width: 320px;
+}
+
+.fieldR{
+  text-align: right;
+  height: 18px;
+}
+
+.fieldL{
+  text-align: left;
+  height: 18px;
+}
+
+.applybtn{
+  background-color: white;
+  border: 1px solid #a0a0a0;
+}
+
+
+#levelform{
+  margin: 0px 0px 0px 0px;
+}
+.permissionform{
+  margin: 0px 0px 0px 0px;
+}
+
+
+/* Recent contents */
+
+body.recent{
+  width: 99%;
+  background-color: #FFFCEE;
+}
+
+.recentcontentsline{ 
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+	background-color: #EFECDE;
+/*  background-color: #f8f8f8; */
+  padding: 5px 4px 3px 4px;
+  margin: 17px;
+  clear: left;
+}
+
+.permittedpagelistheader{
+	margin-left: 20px;
+  font-size: 12px;
+	width: 150px;
+/*	float:left; */
+}				
+
+h2.recentcontents{ 
+  background-color: #6F6C5E;
+  color: #ffffff;
+  padding: 4px;
+  font-size: 16px;
+}
+
+.recentcontents{ 
+  padding: 7px 5px 5px 20px;
+}
+
+.recentcontrols{
+  font-size:14px;
+	margin: 3px 5px 3px 17px;
+  padding: 0px;
+}
+
+
+.tagline1{ 
+  border-color: #a0a0a0;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	margin: 0px 7px 0px 17px;
+  padding: 5px 4px 3px 4px;
+/*	float: left; */
+  width: 700px;
+	overflow: hidden;
+}
+
+.tagline2{ 
+  border-color: #a0a0a0;
+	background-color: #EFECDE;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	margin: 0px 7px 0px 17px;
+  padding: 5px 4px 3px 4px;
+/*	float: left; */
+  width: 700px;
+	overflow: hidden;
+}
+
+.tagname{
+	width: 200px;
+	padding-left: 7px;
+  float:left;
+}
+
+.tagcount{
+	font-size:70%;
+	width: 70px;
+  float:left;
+}
+
+.tagmodified{
+	font-size:70%;
+	width: 200px;
+  float:left;
+}
+
+.tagcreated{
+	font-size:70%;
+	width: 200px;
+  float:left;
+}

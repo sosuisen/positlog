@@ -1,0 +1,18 @@
+/* -----------------------------------------------
+  admintop.css
+  This file is part of PositLog.
+----------------------------------------------- */
+
+A:link,A:visited {
+		color:#006000;
+}
+A:hover {
+		color:#00ff00;
+}
+A:active {
+		color:#ff0000;
+}
+
+body.top{ 
+		background-color: #DFDCCE;
+}

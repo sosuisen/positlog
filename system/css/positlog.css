@@ -1,0 +1,243 @@
+/* -----------------------------------------------
+  positlog.css
+  This file is part of PositLog.
+ ----------------------------------------------- */
+body{ 
+	font-size: 90%;
+ 	line-height: 1.4;
+	padding:0px;
+	margin:0px;
+}
+
+#spritesworld{ 
+	position: absolute;
+	padding:0px;
+	margin:0px;
+}
+
+#screenmask{ 
+	position: absolute;
+	z-index: 1500000;
+}
+
+#javascriptalert{
+  background-color:white;
+  font-size:smaller;
+  position:absolute; 
+  z-index: 2500000; 
+  left: 0px; top: 0px;
+}
+
+#forcecancelmark{
+	background-image: url("../images/cross.gif");
+  position:absolute;
+  z-index: 5000000;
+  left: 0px;
+	top: 0px;
+	width: 21px;
+	height: 21px;
+}
+
+#procanime{
+	background-image: url("../images/processing.gif");
+  position:absolute;
+  z-index: 5000000;
+  left: 0px;
+	top: 0px;
+	width: 21px;
+	height: 21px;
+}
+
+#zoomingcenter{
+	background-image: url("../images/zoomingcenter.gif");
+  position:absolute;
+  z-index: 5000000;
+  left: 0px;
+	top: 0px;
+	width: 21px;
+	height: 21px;
+}
+
+#homebtn{
+	color: #505050;
+  border: 2px solid #EFECDE;
+  position:absolute;
+  z-index: 2500000;
+	padding: 0px;
+  text-align:center;
+  cursor: pointer;
+  display: none;
+	width: 30px;
+	height: 20px;
+}
+
+#zoomscaler{
+	left: 0px;
+	top: 18px;
+	background-image: url("../images/zoomscaler.gif");
+  position:absolute;
+  z-index: 2500000;
+	padding: 0px;
+  cursor: pointer;
+	width: 20px;
+	height: 165px;
+	
+}
+
+#zoompointer{
+	left: 0px;
+	top: 19px;
+	background-image: url("../images/zoompointer.gif");
+	background-repeat: no-repeat;
+  position:absolute;
+  z-index: 2500001;
+	padding: 0px;
+  cursor: pointer;
+	width: 16px;
+	height: 9px;
+}
+
+#x1btn{
+	left: 2px;
+	top: 0px;
+	background-image: url("../images/x1.gif");
+  position:absolute;
+  z-index: 2500000;
+	padding: 0px;
+  cursor: pointer;
+	width: 18px;
+	height: 18px;
+}
+
+#viewcanvas{
+  cursor: pointer;
+}	
+
+#zoomscalerarea{
+  position:absolute;
+  z-index: 2500000;
+	padding: 0px;
+  cursor: pointer;
+  visibility: hidden;
+	width: 20px;
+	height: 183px;
+}
+
+#zoomcaption{
+  border: 1px solid #a0a0a0;
+	padding: 3px;
+	z-index: 2000000;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 90%;
+  margin: 0px; 
+  text-align:center;
+}				
+
+
+#worldframe{
+  position: absolute;
+  border: 5px solid #a0a0a0;
+	z-index: 5;
+	visibility: hidden;
+}
+
+/* -----------------------------------------------
+  footer
+----------------------------------------------- */
+
+#footer{ 
+	z-index: 2000000;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 90%;
+	padding: 0px;
+  margin: 0px; 
+  text-align:right;
+}
+
+#footerbg{
+  padding: 2px;
+}
+
+/* -----------------------------------------------
+  sprites
+----------------------------------------------- */
+
+#spritesworld * .button{ 
+  cursor: pointer;
+}
+
+#spriteslist{ 
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#spritesworld div.sprite{
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	overflow: visible;
+	cursor: auto;
+}
+
+#spritesworld div.sprite div.region{
+	left: 0px;
+	margin: 0px;
+	padding: 1px;
+	border: 0px;
+	float: left; /* This is obligatory */
+}
+
+#spritesworld div.sprite div.contents{
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+/* width: inherit; */ /* This must not be set. */
+}
+
+#spritesworld div.sprite div.info{
+  font-size: 80%;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+#spritesworld div.sprite div.info span.time{
+	margin: 0px 2px 0px 8px;
+	float: right;
+}
+
+#spritesworld div.sprite div.info span.uri{
+	margin: 0px 2px 0px 8px;
+	float: right;
+}
+
+#spritesworld div.sprite div.info span.src{
+	margin: 0px 2px 0px 8px;
+	float: right;
+}
+
+#spritesworld div.sprite div.info span.author{
+	margin: 0px 2px 0px 8px;
+	float: right;
+}
+
+#spritesworld div.sprite div.info span.tag{
+	margin: 0px 2px 0px 8px;
+	float: right;
+}
+
+.linkcaption{
+  font-size:smaller;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+	overflow: visible;
+	cursor: auto;
+}

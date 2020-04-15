@@ -1,0 +1,1277 @@
+/* -----------------------------------------------
+  edit.css
+  This file is part of PositLog.
+ ----------------------------------------------- */
+
+#centermark{ 
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	z-index: 2;
+}
+		 
+/* -----------------------------------------------
+  control panel in EditMode
+----------------------------------------------- */
+#controlpanel{ 
+	position: absolute;
+	z-index: 2000000;
+  background-color: #DFDCCE;
+/*  background-color: #EFECDE; */
+	margin: 0px;
+	padding: 0px;
+  border-bottom: 1px solid #909090;
+	left: 0px;
+	top: 0px;
+	line-height:1.0;
+}
+
+#controlpanel_bar1{
+  float:left;
+  background-color: #6F6C5E;
+	margin: 0px;
+	padding:0px 3px 0px 0px;
+	font-size: 12px;
+}
+
+
+#controlresult{ 
+	float:left;
+	padding: 0px;
+	margin: 3px 0px 0px 3px;  
+	color: #ffe0d0;
+	text-align: left;
+}
+
+#controlinfo{
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+  float: right;
+}
+
+#idarea{
+	color: #FFFFFF;
+  margin: 3px 5px 0px 0px;
+	padding: 0px;
+	float: left;
+}
+
+#cp_auth{ 
+	padding: 0px;
+	margin: 0px;
+	float: left;
+}
+
+#cp_publicauthorlabel, #cp_publicpasslabel{ 
+  margin: 3px 0px 0px 0px;
+	padding: 1px;
+	float: left;
+}
+
+#cp_publicauthor, #cp_publicpass{ 
+	padding: 0px;
+	font-size: 11px;
+	height: 1em;
+	margin: 1px 5px 0px 0px;
+	background-color: #f0f0f0;
+	text-align: left;
+	float: left;
+}
+
+#cp_unlockpass{ 
+	color: #303030;
+  background-color: #EFECDE;
+  font-size:10px;
+	line-height:12px;
+	padding: 2px 0px 0px 0px;
+	margin: -1px 0px 0px 0px;
+	float: left;
+}
+
+#revertpropertybtn{ 
+	color: #303030;
+  background-color: #EFECDE;
+  font-size:10px;
+	line-height:12px;
+	padding: 2px 0px 0px 0px;
+	margin: 1px 0px 0px 0px;
+	float: left;
+}
+
+#savehomebtn{ 
+	color: #303030;
+  background-color: #EFECDE;
+  font-size:10px;
+	line-height:12px;
+	padding: 2px 0px 0px 0px;
+	margin: 1px 0px 0px 0px;
+	float: right;
+}
+
+#about{
+	color: #FFFFFF;
+  margin: 3px 5px 0px 0px;
+	padding: 1px;
+	float: left;
+}				
+
+#helpbtn{ 
+	padding: 0px 3px 0px 3px;
+  cursor: pointer;
+}
+
+#helparea{ 
+	padding: 0px 0px 0px 7px;
+}
+
+#about a {
+  color: white;
+  text-decoration:none;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+#about a:hover {
+  color: #8F8C7E;
+	border-left: 1px solid #8F8C7E;
+	border-right: 1px solid #8F8C7E;
+}
+
+
+#controlpanel_bar2{
+	clear: left;
+	margin: 0px 0px 0px 0px;
+	padding:0px;
+	font-size: 12px;
+}
+
+#controlpanel_bar3{
+	clear: left;
+	margin: 0px 0px 1px 0px;
+	padding:0px;
+	font-size: 12px;
+}
+
+#controlpanel_bar4{
+	clear: left;
+	margin: 1px 0px 1px 0px;
+	padding:0px;
+	font-size: 12px;
+}
+
+#newspritebtn{ 
+	background-image: url("../images/newspritebtn.gif");
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;  
+	width: 30px;
+/*	height: 20px;*/
+height: 1.8em;
+	float: left;
+  cursor: pointer;
+}
+
+#newpagebtn{ 
+	background-image: url("../images/newpagebtn.gif");
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;  
+	width: 30px;
+/*	height: 20px;*/
+height: 1.8em;
+	float: left;
+  cursor: pointer;
+}
+
+
+#propertybtn{ 
+	background-image: url("../images/propertybtn.gif");
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;  
+	width: 30px;
+/*	height: 20px;*/
+height: 1.8em;
+	float: left;
+  cursor: pointer;
+}
+
+
+#arrowbtn{ 
+	background-image: url("../images/arrowbtn.gif");
+	background-repeat: no-repeat;
+	margin: 1px 3px 0px 3px;
+	padding: 0px;  
+	width: 30px;
+	height: 1.8em;
+	float: left;
+  cursor: pointer;
+}
+
+#drawingbtn{ 
+	background-image: url("../images/drawingbtn.gif");
+	background-repeat: no-repeat;
+	margin: 1px 3px 0px 0px;
+	padding: 0px;  
+	width: 30px;
+	height: 1.8em;
+	float: left;
+  cursor: pointer;
+}
+
+#directdropbtn{ 
+	background-image: url("../images/directdropbtn.gif");
+	background-repeat: no-repeat;
+	margin: 1px 3px 0px 3px;
+	padding: 0px;  
+	width: 30px;
+	height: 1.8em;
+	float: left;
+  cursor: pointer;
+}
+
+.spriteproperty{ 
+	font-size: 12px;
+	color: #303030;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	float: left;
+/*	height: 20px;*/
+height: 1.8em;
+	line-height:1.1;
+}
+
+
+#spriteproperty0{ 
+  border-right: 1px solid #BFBCAE;
+}									
+
+#spriteproperty5{ 
+  border-right: 1px solid #BFBCAE;
+}									
+
+#spriteproperty6{ 
+  border-right: 1px solid #BFBCAE;
+}									
+
+#spriteproperty7{
+  border-right: 1px solid #BFBCAE;
+}									
+
+#spriteproperty8{ 
+  border-right: 1px solid #BFBCAE;
+}									
+
+
+#propertylabel{
+	margin: 4px 3px 0px 3px;
+	padding: 0px;
+	clear: left;
+}
+
+#textcolorbtn{ 
+	background-image: url("../images/textcolorbtn.gif");
+	background-repeat: no-repeat;
+	margin: 0px 3px 0px 3px;
+	padding: 0px;  
+	width: 30px;
+/*	height: 20px;*/
+height: 1.8em;
+	float: left;
+  cursor: pointer;
+}
+
+#bgcolorbtn{ 
+	background-image: url("../images/bgcolorbtn.gif");
+	background-repeat: no-repeat;
+	margin: 0px 3px 0px 3px;
+	padding: 0px;  
+	width: 30px;
+/*	height: 20px;*/
+height: 1.8em;
+
+	float: left;
+  cursor: pointer;
+}
+
+#linecolorbtn{ 
+	background-image: url("../images/linecolorbtn.gif");
+	background-repeat: no-repeat;
+	margin: 0px 3px 0px 3px;
+	padding: 0px;  
+	width: 30px;
+/*	height: 20px;*/
+height: 1.8em;
+
+	float: left;
+  cursor: pointer;
+}
+
+#drawcolorbtn{ 
+	background-image: url("../images/linecolorbtn.gif");
+	background-repeat: no-repeat;
+	margin: 0px 3px 0px 3px;
+	padding: 0px;  
+	width: 30px;
+/*	height: 20px;*/
+height: 1.8em;
+
+	float: left;
+  cursor: pointer;
+}
+
+
+#propertystylelabel{
+	margin: 3px 0px 0px 3px;
+	padding: 0px;
+	float: left;
+}
+
+#styleselector{
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+	float: left;
+/*	height: 18px;*/
+  height: 1.5em;
+}
+
+#linestyleselector{
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+	float: left;
+/*	height: 18px;*/
+  height: 1.5em;
+}
+
+#propertywidthlabel{
+	margin: 3px 0px 0px 3px;
+	padding: 0px;
+	float: left;
+}
+
+#widthselector{
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+	float: left;
+/*	height: 18px;*/
+  height: 1.5em;
+}
+
+#linewidthselector{
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+	float: left;
+/*	height: 18px;*/
+	height: 1.5em;
+}
+
+#propertypaddinglabel{
+	margin: 3px 0px 0px 3px;
+	padding: 0px;
+	float: left;
+}
+
+#paddingselector{
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+	float: left;
+/*	height: 18px;*/
+	height: 1.5em;
+}
+
+#propertyuri{
+	margin: 0px;
+	padding: 3px 3px 0px 2px;
+	float: left;
+}
+
+#showuri{
+	margin: 1px 0px 0px 5px;
+	padding: 0px;
+	float: left;
+}
+
+#propertytime{
+	margin: 0px;
+	padding: 3px 3px 0px 2px;
+	float: left;
+}
+
+#showtime{
+	margin: 1px 0px 0px 5px;
+	padding: 0px;
+	float: left;
+}
+
+#propertyauthor{
+	margin: 0px;
+	padding: 3px 3px 0px 2px;
+	float: left;
+}
+
+#showauthor{
+	margin: 1px 0px 0px 5px;
+	padding: 0px;
+	float: left;
+}
+
+#tagarea{
+	margin: 0px 0px 0px 1px;
+	float: left;
+}
+
+#taglabel{
+	margin: 0px;
+	padding: 3px 3px 0px 2px;
+	float: left;
+}
+
+#tagfield{
+  font-size: 12px;
+  height: 1.2em;
+	float: left;
+}	
+
+#showtag{
+	margin: 1px 0px 0px 5px;
+	padding: 0px;
+	float: left;
+}
+
+#savepropertybtn{ 
+	background-image: url("../images/save.gif");
+	background-repeat: no-repeat;
+	margin: 3px 3px 0px 7px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	float: left;
+  cursor: pointer;
+}
+
+
+/* -----------------------------------------------
+  sprites
+----------------------------------------------- */
+
+#spritemenu{
+	left: 0px;
+	width: 0px;
+	position: absolute;
+	height: 20px;
+	z-index: 1000000;
+	cursor: move;
+}
+
+#sprite-scaler{
+	background-image: url("../images/scaler.gif");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	font-size: 1px;	
+	line-height: 1px;
+	cursor: e-resize;
+	z-index: 1000000;
+}
+
+#sprite-mover{
+	position: absolute;
+	width: 1px;
+	height: 20px;
+	font-size: 1px;
+	line-height: 1px;
+	left: 25px;
+	top: 1px;
+}
+
+#sprite-opensubmenu{
+	background-image: url("../images/submenu.gif");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	font-size: 1px;
+	line-height: 1px;
+	right: 1px;
+	top: 1px;
+}
+
+#sprite-editor{
+	background-image: url("../images/editor.gif");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	font-size: 1px;
+	line-height: 1px;
+	float:left;
+	margin: 1px 5px 0px 1px;
+}
+
+#sprite-comment{
+	background-image: url("../images/comment.gif");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	font-size: 1px;
+	line-height: 1px;
+	float:left;
+	margin: 1px 0px 0px 1px;
+}
+
+
+#sprite-submenu{
+	z-index: 2000000;
+	font-size: 12px;
+
+	margin: 0px;
+	padding: 0px;
+
+  border-top: 1px solid #909090;
+  border-left: 1px solid #909090;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+
+	width: 130px;
+	position: absolute;
+}
+
+#sprite-submenu-cut{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	width: 120px;
+}
+
+#sprite-submenu-copy{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	width: 120px;
+}
+
+#sprite-submenu-paste{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	width: 120px;
+}
+
+#sprite-submenu-alias{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	width: 120px;
+}
+
+#sprite-submenu-delete{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	border-bottom: 1px solid #909090;
+	width: 120px;
+}
+
+#sprite-submenu-newsprite{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	border-top: 1px solid #909090;
+	width: 120px;
+}
+
+#sprite-submenu-newpage{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	width: 120px;
+}
+
+#sprite-submenu-group{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	width: 120px;
+}
+
+#sprite-submenu-ungroup{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	border-bottom: 1px solid #909090;
+	width: 120px;
+}
+
+#sprite-submenu-sendtotop{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	width: 120px;
+}
+
+#sprite-submenu-sendtobottom{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	width: 120px;
+}
+
+#sprite-submenu-contextmenu{
+	margin: 0px;
+	padding: 4px;
+	position: absolute;
+	border-bottom: 1px solid #909090;
+	width: 120px;
+}
+
+/* -----------------------------------------------
+   dialog
+----------------------------------------------- */
+
+#plugin-dialog{
+	z-index: 3000100;
+	position: absolute;
+  background-color: #EFECDE;
+	border: 1px solid #6F6C5E;
+	font-size: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#plugintitle{
+	background-color: #D7D4C6;
+	margin: 0px 0px 7px 0px;
+	left: 0px;
+	top: 0px;
+	height: 20px;
+	text-align: center;	
+	cursor: move;
+}
+
+#pluginclosebtn{
+	background-color: #D7D4C6;
+	background-image: url("../images/close.gif");
+	background-repeat: no-repeat;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+  width: 20px;
+  height:20px;
+	right: 0px;
+	top: 0px;
+  cursor: pointer;
+}
+
+#plugin-nametitle{
+ 	float: left;
+	margin: 0px 0px 0px 10px;
+}
+
+#plugin-optiontitle{
+ 	float: left;
+	margin: 0px 0px 0px 10px;
+}
+
+
+#plugin-templatetitle{
+ 	float: left;
+	margin: 0px 0px 0px 10px;
+}
+
+#dialog-clearcache{
+ 	float: left;
+	margin: 3px 3px 3px 5px;
+
+	color: #303030;
+  background-color: #EFECDE;
+}
+
+#dialog-ok{
+	margin: 3px 5px 10px 5px;
+	float: right;
+	color: #303030;
+  background-color: #EFECDE;
+}
+
+#dialog-clearcacheresult{
+ 	color: red;  
+ 	float: left;
+	margin: 0px 0px 0px 5px;
+}
+
+#plugin-name{
+	clear: left;
+	font-size: small;
+	margin: 0px 0px 0px 5px;
+}
+
+#plugin-option{
+	font-size: small;
+	width: 286px;
+	margin: 0px 5px 0px 5px;
+}
+
+#plugin-template{
+	font-size: small;
+	width: 286px;
+	margin: 0px 5px 0px 5px;
+}
+
+/* -----------------------------------------------
+   editor
+----------------------------------------------- */
+
+#editor{
+	z-index: 3000000;
+	position: absolute;
+  background-color: #EFECDE;
+	border: 2px solid #000000;
+	font-size: 100%;
+	padding: 0px;
+}
+
+#editor-control{
+	background-color: #D7D4C6;
+	margin: 0px;
+	width:500px;
+	left:0px;
+	top:0px;
+	height: 20px;
+	position: absolute;
+	cursor: move;
+}
+
+#editor-control2{
+  background-color: #EFECDE;
+	margin: 0px;
+	width:500px;
+	left:0px;
+	top:22px;
+	height: 20px;
+	position: absolute;
+	cursor: text;
+}
+
+#editor-closebtn{
+	background-image: url("../images/close.gif");
+	background-repeat: no-repeat;
+	margin: 0px;
+	right:1px;
+	top:0px;
+	position: absolute;
+	cursor: default;
+	width: 20px;
+	height: 20px;
+}
+
+#editor-savebtn{
+	background-image: url("../images/save.gif");
+	background-repeat: no-repeat;
+	margin: 0px;
+	left: 2px;
+	top: 2px;	
+	position: absolute;
+	cursor: default;
+	width: 16px;
+	height: 16px;
+}
+
+#editor-id{
+	margin: 0px;
+	left: 70px;
+	top: 0px;	
+	position: absolute;
+	font-size: 11px;
+	text-align: center;
+}
+
+#editor-captionlabel{
+	margin-left: 10px;
+	margin-right: 4px;
+	font-size: 12px;
+	float: left;
+}
+
+#editor-paddingselectortitle{
+	margin-left: 10px;
+	margin-right: 2px;
+	float: left;
+	font-size: 12px;
+}
+
+#uploaderbtn{
+	float: left;
+  font-size:10px;
+	line-height:12px;
+	padding: 2px 0px 0px 0px;
+	margin: 0px 0px 0px 3px;
+}
+
+#fileclearbtn{
+	float: left;
+	color: #303030;
+  background-color: #EFECDE;
+  font-size:10px;
+	line-height:12px;
+	padding: 2px 0px 0px 0px;
+	margin: 0px 0px 0px 3px;
+}
+
+#uploadedfilename{ 
+	padding: 0px;
+	margin: 5px 0px 0px 3px;
+	float: left;
+}
+
+#pluginbtn{
+	float: left;
+  font-size:10px;
+	line-height:12px;
+	padding: 2px 0px 0px 0px;
+	margin: 0px 0px 0px 3px;
+}
+
+.btn-open{
+	color: #EFECDE;
+  background-color: #909090;
+}
+
+.btn-close{
+	color: #303030;
+  background-color: #EFECDE;
+}
+
+#cp_pluginname{ 
+	float: left;
+	margin: 3px 0px 0px 3px;
+	padding: 0px;  
+}
+
+#editor-textarea{
+	border: 1px solid #606060;
+	margin: 0px;
+	position: absolute;
+	left: 3px;
+	width: 100%;
+/*	font-size: smaller; */
+/*	line-height: 1.1; */
+	font-size: 90%;
+	line-height: 1.3;
+}
+
+#editorarea{
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 0px;
+	top:22px;
+}
+
+
+#uploader-dialog{
+	z-index: 3000100;
+	position: absolute;
+  background-color: #EFECDE;
+	border: 1px solid #6F6C5E;
+	font-size: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#uploadertitle{
+	background-color: #D7D4C6;
+	margin: 0px 0px 7px 0px;
+	left: 0px;
+	top: 0px;
+	height: 20px;
+	text-align: center;	
+	cursor: move;
+}
+
+
+#uploaderclosebtn{
+	background-color: #D7D4C6;
+	background-image: url("../images/close.gif");
+	background-repeat: no-repeat;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+  width: 20px;
+  height:20px;
+	right: 0px;
+	top: 0px;
+  cursor: pointer;
+}
+
+#fileuploadframe{
+	border: 0px;
+	margin: 0px;
+	width: 286px;
+	padding: 7px;
+}
+
+#editor-framecolorbtn{
+	font-size: 12px;
+	padding: 0px;
+	height: 20px;
+	float: left;
+	margin-left: 24px;
+}
+
+#editor-borderstyleselector{
+	float: left;
+  border: 1px solid #8f8f73;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+#editor-bgcolorbtn{
+	font-size: 12px;
+	padding: 0px;
+	height: 20px;
+	float: left;
+}
+
+#editor-forecolorbtn{
+	margin-left: 10px;
+	font-size: 12px;
+	padding: 0px;
+	height: 20px;
+	float: left;
+}
+
+#editor-arrowcolorbtn{
+	margin-left: 10px;
+	font-size: 12px;
+	padding: 0px;
+	height: 20px;
+	float: left;
+}
+
+#editor-borderwidthselector{
+	float: left;
+  border: 1px solid #8f8f73;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+#editor-paddingselector{
+	float: left;
+  border: 1px solid #8f8f73;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+/* Drawing tool */
+
+#drawingtool{
+	z-index: 2000011;
+  background-color: #EFECDE;
+	border: 1px solid #6F6C5E;
+	position: absolute;
+}	
+
+#drawingtooltitle{
+	background-color: #D7D4C6;
+	position: absolute;	
+	left: 0px;
+	top: 0px;
+	height: 20px;
+	text-align: center;	
+	cursor: move;
+}
+
+#drawinglinewidthblock{
+	position: absolute;
+  left: 6px;
+  top: 30px;
+}
+
+#drawinglinewidthlabel{
+	margin: 0px 4px 0px 0px;
+	padding: 0px;
+	height: 1.5em;
+}
+
+#drawinglinewidthselector{
+	margin: 0px;
+	padding: 0px;
+	height: 1.5em;
+}
+
+#undodrawingblock{
+	position: absolute;
+  left: 6px;
+  top: 80px;
+}
+
+#undodrawinglabel{
+	margin: 0px 4px 0px 0px;
+	padding: 0px;
+	height: 1.5em;
+}
+
+#undodrawingbtn{ 
+	background-image: url("../images/undo.gif");
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 20px;
+  cursor: pointer;
+}
+
+/* Color picker */
+
+#colorpicker{
+	z-index: 2000010;
+  background-color: #EFECDE;
+	border: 1px solid #6F6C5E;
+	position: absolute;
+}	
+
+#colorpickertitle{
+	background-color: #D7D4C6;
+	position: absolute;	
+	left: 0px;
+	top: 0px;
+	height: 20px;
+	text-align: center;	
+	cursor: move;
+}
+
+#svarea{
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 27px;
+	left: 10px;
+	width: 128px;
+	height: 208px;
+}
+
+#huearea{
+	position: absolute;
+  top: 27px;
+  left: 145px;
+	width: 12px;
+	height: 208px;
+}
+
+#huearea div{
+  margin: 0px;
+	padding: 0px;
+	height: 1px;
+	width: 12px;
+}
+
+#colorpointer{
+	background-image: url("../images/colorpointer.gif");
+	background-repeat: no-repeat;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+  width: 7px;
+  height: 7px;
+	left: 7px; /* svarea.offsetLet - 3 */
+	top: 23px; /* svarea.offsetTop - 4 */
+}
+
+#colorslider{
+	background-image: url("../images/colorslider.gif");
+	background-repeat: no-repeat;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+  width: 18px;
+  height: 5px;
+	left: 142px; /* svarea.offsetLet - 3 */
+	top: 25px; /* svarea.offsetTop - 2 */
+}
+
+
+#colorpickerclosebtn{
+	background-color: #D7D4C6;
+	background-image: url("../images/close.gif");
+	background-repeat: no-repeat;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+  width: 20px;
+  height:20px;
+	right: 0px;
+	top: 0px;
+  cursor: pointer;
+}
+
+#currentcolor{
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid #000000;
+	position: absolute;
+	top: 27px;
+	left: 168px;
+	width: 48px;
+	height: 32px;
+}
+
+#hexbox{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	position: absolute;
+	top: 27px;
+  left: 220px;
+}
+
+
+#hexlabel{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	float: left;
+}
+
+#hexinput{
+	height: 12px;
+	float: left;
+	width: 50px;
+}
+
+#hexsetbtn{
+	font-size: 12px;
+	margin-left: 3px;
+	width: 16px;
+	height: 16px;
+	float: left;
+	background-image: url("../images/save.gif");
+	background-repeat: no-repeat;
+}
+
+#hexclearbtn{
+	width: 14px;
+	height: 14px;
+	border: 1px dashed #909090;
+	position: absolute;
+	left: 16px;
+	top: 22px;
+
+	font-size: 11px; /* for IE6 */
+	line-height: 1;  /* for IE6 */
+
+	float: left;
+}
+
+#hexclearlabel{
+	font-size: 10px;
+	position: absolute;
+	left: 35px;
+	top: 22px;
+	float: left;
+}
+
+#colorpalettebox{
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	top: 70px;
+  left: 168px;
+}
+
+
+#colorpalettebox-custom{
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	top: 142px;
+  left: 168px;
+}
+
+#colorregistbox{
+  left: 168px;
+  top: 193px;
+	position: absolute;
+}				
+
+#colorregistbtn{
+	width: 16px;
+	height: 16px;
+	float: left;
+	background-image: url("../images/colorregist.gif");
+	background-repeat: no-repeat;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+  width: 20px;
+  height:20px;
+  cursor: pointer;
+}
+
+
+#colorregistlabel{
+	font-size: 10px;
+	float: left;
+	margin-left: 3px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	top: 3px;
+  height:12px;
+}
+
+#colorregistlabel2{
+	font-size: 10px;
+  right: 8px;
+  top: 193px;
+	position: absolute;
+}				
+
+#colorpalettebox-history{
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	top: 219px;
+  left: 168px;
+}
+
+.colorpalette{
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid #909090;
+	position: absolute;
+	font-size: 11px; /* for IE6 */
+	line-height: 1;  /* for IE6 */
+  cursor: pointer;
+}
+
+.connector{
+	z-index: 1000000;
+	background-image: url("../images/chain.gif");
+	background-repeat: no-repeat;
+	margin: 0px;
+	position: absolute;
+	cursor: pointer;
+	width: 17px;
+	height: 17px;
+}
+
+#dropuploader{
+	position: absolute;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	z-index: 1;
+}
+
+#dropframe{
+  position: absolute;
+	z-index: 1;
+	margin: 0px;
+	padding: 0px;
+}

@@ -1,0 +1,80 @@
+/* -----------------------------------------------
+  logincheck.css
+  This file is part of PositLog.
+----------------------------------------------- */
+
+body{ 
+	font-size: 100%;
+  background-color: #EFECDE;
+}
+
+#logintop{
+	position: absolute;
+	top: 80px;
+	width: 95%;
+ 	text-align: center;
+}
+
+#login{
+ 	background-color: #FFFCEE;
+	border: 1px solid #6F6C5E;
+	padding: 5px;
+ 	text-align: left;
+ 	width: 360px;
+ 	/* for centering this box except on IE */
+	margin-left:auto;
+	margin-right:auto;
+}
+
+h1{
+	font-size: 20px;
+}
+
+.availablechar{
+  font-size: 12px;
+}
+
+
+#loginform, #loginid, #loginpass{
+	font-size: 24px;
+}
+
+#saveaccount-label{
+	font-size: 16px;
+}
+
+#submitarea{
+ 	text-align: right;
+}
+
+#submitbtn{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	background-color: #FFFFFF;
+	border: 1px solid #6F6C5E;
+}
+
+
+#admin{
+ 	background-color: #EFECDE;
+	padding: 5px;
+
+	width: 360px;
+ 	text-align: right;
+
+	margin-top: 10px;
+ 	/* for centering this box except on IE */
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#copyright{
+	width: 360px;
+ 	text-align: right;
+	margin-top: 10px;
+ 	/* for centering this box except on IE */
+	margin-left:auto;
+	margin-right:auto;
+ 	
+}
