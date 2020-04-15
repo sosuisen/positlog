@@ -1,0 +1,134 @@
+===========================================================
+ CGI専用のディレクトリが定められている場合のインストール
+
+ Hidekazu Kubota
+ 2008-02-12 version 0.6
+===========================================================
+
+PositLogでは，CGI専用のディレクトリが定められているサーバでの動作を正式にはサポートしません．
+（CGI専用のディレクトリとは，例えばApacheでScriptAliasを用いた場合のように，CGIを設置するディレクトリ以下のファイルが全てCGIスクリプトだとみなされて，そこに置かれた画像やHTMLファイルをブラウザからは開くことができない場合のことを指しています．）
+
+この場合，現状では次の制約があります．
+・CSSを用いるプラグイン（標準プラグインでは，cocolog, HatenaDiary, HatenaAntenna, RSSlayouter）において，CSSが反映されません．個別にファイルの内容を書き換えて対処する必要があります．必要に応じて適宜お願いします．
+・PositLogConfig.pm の通常変更しない部分に手を加える必要があります．
+・ディレクトリ構成が複雑になります．
+
+該当する場合，次の例を参考にファイルを設置し，その後，PositLogConfig.pm を編集してください．この例では，CGIを/xxx/cgi-bin/以下に設置します．設置したCGIには http://xxx.com/cgi-bin/ からアクセスできるものとします．CGI以外のファイルは /xxx/htdocs/以下に設置します．設置したファイルには http://xxx.com/ からアクセスできるものとします．
+
+ファイルは次のように配置することになります．/* は対象ディレクトリ以下のファイル全てを表します．
+
+/xxx/htdocs/
+ |- admintools/
+ |   |- logoadmin.jpg
+ |   |- css/*
+ |
+ |- pages/ (777)
+ |- bgimages/ (777)
+ |- system/*
+
+/xxx/cgi-bin/
+ |- admindata/ (777)
+ |
+ |- admintpools/
+ |   |- admin.cgi
+ |   |- adminnavi.cgi
+ |   |- admintop.cgi
+ |   |- pagemanager.cgi
+ |   |- pageproperty.cgi
+ |   |- positlogadmin.cgi
+ |   |- usermanager.cgi
+ |   |- userproperty.cgi
+ |
+ |- exlib/*
+ |- lang/*
+ |- PositLogPlugin/*
+ |
+ |- system/fckeditor/editor/filemanager/connectors/perl (777)
+ |- system/fckeditor/editor/filemanager/connectors/perl/*
+ |
+ |- clearCache.cgi（755）
+ |- createadmin.cgi（755）
+ |- createPage.cgi（755）
+ |- deleteSprite.cgi（755）
+ |- fileloader.cgi（755）
+ |- fileupload.cgi（755）
+ |- groupSprite.cgi（755）
+ |- pagerss.cgi（755）
+ |- positlog.cgi（755）
+ |- PositLogAuth.pm（644）
+ |- PositLogConfig.pm（644）
+ |- PositLogLink.pm（644）
+ |- PositLogParam.pm（644）
+ |- PositLogSprites.pm（644）
+ |- recentcontents.cgi（755）
+ |- saveSprite.cgi（755）
+ |- saveStyles.cgi（755）
+ |- tag.cgi（755）
+ |- ungroupSprite.cgi（755）
+ |- unlockPassword.cgi（755）
+
+
+----------------------------------------
+
+この例の場合，PositLogConfig.pm は次のように設定します．
+-------------------------------------------
+$rooturl = "http://xxx.com/cgi-bin/";
+
+$datapath = "../htdocs/pages/";
+
+$systempath = "/system/";
+(/xxx/htdocs/system/ 以下にあるファイルへアクセスするための，サイトのルート(/)から始まるパス)
+
+$admintoolscgipath = "/cgi-bin/admintools/";
+(/xxx/htdocs/admintools/ 以下にあるファイルへアクセスするための，サイトのルート(/)から始まるパス)
+
+$admintoolsfilepath = "../admintools/";
+(http://xxx.com/cgi-bin/ から辿っても，http://xxx.com/ から辿っても http://xxx.com/admintools/ を指すような相対パス．これは少々トリッキーです．)
+
+$dataurl = "/pages/";
+(/xxx/htdocs/pages/ 以下にあるファイルへアクセスするための，サイトのルート(/)から始まるパス)
+
+$fckuploadurl = "/pages/";
+(/xxx/htdocs/pages/ 以下にあるファイルへアクセスするための，サイトのルート(/)から始まるパス)
+
+
+$fckconnector = "/cgi-bin/system/fckeditor/editor/filemanager/connectors/perl/connector.cgi";
+(connector.cgi へのサイトのルート(/)から始まるパス)
+
+$fckuploader = "/cgi-bin/system/fckeditor/editor/filemanager/connectors/perl/upload.cgi";
+(upload.cgi へのサイトのルート(/)から始まるパス)
+
+-------------------------------------------
+
+そのほか，http_mod_rewrite はそのままでは利用できません．$mod_rewrite = 1; にする場合は，.htaccess を次のように設定することになります．ただし，これは本例についての場合であり，サーバの環境によっては異なる場合があります．というか，おそらく異なりますので参考まで．
+
+
+/xxx/cgi-bin/直下の .htaccess
+=======================
+DirectoryIndex positlog.cgi
+ 
+AddHandler cgi-script .cgi .pm .dat .spr 
+ 
+RewriteEngine on
+RewriteRule tag/(.*)$ /cgi-bin/tag.cgi?tag=$1 [L]
+RewriteRule tag/$ /cgi-bin/tag.cgi [L]
+RewriteRule index.html$ positlog.cgi [L]
+RewriteRule (p?g?[0-9]{6}[a-zA-Z]{2})\.html$ /cgi-bin/positlog.cgi?load=$1 [QSA,L]
+=======================
+
+/xxx/htdocs/直下の .htaccess
+=======================
+DirectoryIndex /cgi-bin/positlog.cgi
+ 
+AddHandler cgi-script .cgi .pm .dat .spr 
+ 
+RewriteEngine on
+RewriteRule ^positlog.cgi /cgi-bin/positlog.cgi [L]
+RewriteRule tag/(.*)$ /cgi-bin/tag.cgi?tag=$1 [L]
+RewriteRule tag/$ /cgi-bin/tag.cgi [L]
+RewriteRule index.html$ /cgi-bin/positlog.cgi [L]
+RewriteRule (p?g?[0-9]{6}[a-zA-Z]{2})\.html$ /cgi-bin/positlog.cgi?load=$1 [QSA,L]
+=======================
+
+
+以上です．

@@ -1,0 +1,4 @@
+Options -Indexes
+DirectoryIndex positlog.cgi index.html
+
+AddHandler cgi-script .cgi .pm .dat .spr 

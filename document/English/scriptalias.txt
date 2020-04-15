@@ -1,0 +1,138 @@
+===========================================================
+ Installation on ScriptAlias Environment
+
+ Hidekazu Kubota
+ 2008-02-12 Document for version 0.6
+===========================================================
+
+PositLog does not officially support servers that use ScriptAlias. Using ScriptAlias implies that a particular directory is set aside for the CGI scripts. Some functions are not available on such servers.
+
+- CSS of Plug-ins (cocolog, HatenaDiary, HatenaAntenna, RSSlayouter 
+ in Standard Plug-ins) is not available by default. 
+ You need to rewrite the path of the CSS files.
+- Edit more settings in PositLogConfig.pm
+- Directory Structure of PositLog becomes complex.
+
+
+Refer to the following sample, place files, and edit PositLogConfig.pm.
+The example presumes that CGI files are under /xxx/cgi-bin/ and accessed by 
+the URL http://xxx.com/cgi-bin/.
+It also presumes that files except CGI are under /xxx/htdocs/ and accessed by
+the URL http://xxx.com/.
+
+== SAMPLE == 
+( /* denotes all files under the directory.)
+
+/xxx/htdocs/
+ |- admintools/
+ |   |- logoadmin.jpg
+ |   |- css/*
+ |
+ |- pages/ (777)
+ |- bgimages/ (777)
+ |- system/*
+
+/xxx/cgi-bin/
+ |- admindata/ (777)
+ |
+ |- admintpools/
+ |   |- admin.cgi
+ |   |- adminnavi.cgi
+ |   |- admintop.cgi
+ |   |- pagemanager.cgi
+ |   |- pageproperty.cgi
+ |   |- positlogadmin.cgi
+ |   |- usermanager.cgi
+ |   |- userproperty.cgi
+ |
+ |- exlib/*
+ |- lang/*
+ |- PositLogPlugin/*
+ |
+ |- system/fckeditor/editor/filemanager/connectors/perl (777)
+ |- system/fckeditor/editor/filemanager/connectors/perl/*
+ |
+ |- clearCache.cgi（755）
+ |- createadmin.cgi（755）
+ |- createPage.cgi（755）
+ |- deleteSprite.cgi（755）
+ |- fileloader.cgi（755）
+ |- fileupload.cgi（755）
+ |- groupSprite.cgi（755）
+ |- pagerss.cgi（755）
+ |- positlog.cgi（755）
+ |- PositLogAuth.pm（644）
+ |- PositLogConfig.pm（644）
+ |- PositLogLink.pm（644）
+ |- PositLogParam.pm（644）
+ |- PositLogSprites.pm（644）
+ |- recentcontents.cgi（755）
+ |- saveSprite.cgi（755）
+ |- saveStyles.cgi（755）
+ |- tag.cgi（755）
+ |- ungroupSprite.cgi（755）
+ |- unlockPassword.cgi（755）
+
+
+----------------------------------------
+
+In the case above, set PositLogConfig.pm as follows:
+-------------------------------------------
+$rooturl = "http://xxx.com/cgi-bin/";
+
+$datapath = "../htdocs/pages/";
+
+$systempath = "/system/";
+(This is the URL from the Site Root URL (/), which matches /xxx/htdocs/system/.)
+
+$admintoolscgipath = "/cgi-bin/admintools/";
+(This is the URL from the Site Root URL (/), which matches /xxx/htdocs/admintools/.)
+
+$admintoolsfilepath = "../admintools/";
+(This is a tricky relative URL, which matches http://xxx.com/admintools/ 
+ from both http://xxx.com/cgi-bin/ and http://xxx.com/.)
+
+$dataurl = "/pages/";
+(This is the URL from the Site Root URL (/), which matches /xxx/htdocs/pages/.)
+
+$fckuploadurl = "/pages/";
+(This is the URL from the Site Root URL (/), which matches /xxx/htdocs/pages/.)
+
+$fckconnector = "/cgi-bin/system/fckeditor/editor/filemanager/connectors/perl/connector.cgi";
+(This is the URL from the Site Root URL (/), which matches connector.cgi.)
+
+$fckuploader = "/cgi-bin/system/fckeditor/editor/filemanager/connectors/perl/upload.cgi";
+(This is the URL from the Site Root URL (/), which matches upload.cgi.)
+
+-------------------------------------------
+
+If you set $mod_rewrite = 1, change .htaccess as follows.
+(This example is available only if the setting is the same above.)
+
+.htaccess just within /xxx/cgi-bin/
+=======================
+DirectoryIndex positlog.cgi
+ 
+AddHandler cgi-script .cgi .pm .dat .spr 
+ 
+RewriteEngine on
+RewriteRule tag/(.*)$ /cgi-bin/tag.cgi?tag=$1 [L]
+RewriteRule tag/$ /cgi-bin/tag.cgi [L]
+RewriteRule index.html$ positlog.cgi [L]
+RewriteRule (p?g?[0-9]{6}[a-zA-Z]{2})\.html$ /cgi-bin/positlog.cgi?load=$1 [QSA,L]
+=======================
+
+.htaccess just within /xxx/htdocs/
+=======================
+DirectoryIndex /cgi-bin/positlog.cgi
+ 
+AddHandler cgi-script .cgi .pm .dat .spr 
+ 
+RewriteEngine on
+RewriteRule ^positlog.cgi /cgi-bin/positlog.cgi [L]
+RewriteRule tag/(.*)$ /cgi-bin/tag.cgi?tag=$1 [L]
+RewriteRule tag/$ /cgi-bin/tag.cgi [L]
+RewriteRule index.html$ /cgi-bin/positlog.cgi [L]
+RewriteRule (p?g?[0-9]{6}[a-zA-Z]{2})\.html$ /cgi-bin/positlog.cgi?load=$1 [QSA,L]
+=======================
+

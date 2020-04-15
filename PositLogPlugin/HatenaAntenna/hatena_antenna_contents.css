@@ -1,0 +1,23 @@
+/* -----------------------------------------------
+  hatena_antenna_contents.css
+  This is a CSS for HatenaAntenna.pm
+ ----------------------------------------------- */
+
+div.hatena_antenna_contents * .title
+{
+	font-size: 90%;
+	line-height: 1em;
+}
+
+div.hatena_antenna_contents * .description
+{
+	font-size: 80%;
+	line-height: 1em;
+}
+
+div.hatena_antenna_contents .frame
+{
+	border: 2px solid #fffcf8;
+	padding: 3px;
+}
+

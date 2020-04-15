@@ -1,0 +1,4 @@
+.tagcloud_contents { text-align:justify; }
+.tagcloud_contents a { text-decoration:none; margin-bottom: 1px; border-bottom: 0px;}
+.tagcloud_contents a:hover { border-bottom: 1px dotted; margin-bottom: 0px;}
+.tagcloud_contents .tagname { margin-right: 10px; }

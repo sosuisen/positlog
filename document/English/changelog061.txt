@@ -1,0 +1,26 @@
+====================================================
+0.61 Changelog
+
+Hidekazu Kubota
+2008/3/5 ver 1.0
+====================================================
+
+- Dragging and dropping files from a desktop to a Web browser was enabled. 
+ Image files will be placed at where you dropped them. 
+ Other files will be uploaded to the server and a link thereto will be created. 
+  (http://positlog.com/080305FB.html)
+
+- Support for wiki markup was added.
+  (http://positlog.com/080305rU.html)
+
+- Subadmin group was added. Any user group can be a subadmin group. If a subadmin group is permitted to edit a page, the Logged-in user who belongs to this group can edit the sprites created by other Logged-in users on the page. 
+  (http://positlog.com/071210XT.html)
+
+- User-defined home position was enabled. A home position is the initial zoom rate and view position of a page. A user can come back to the home position by clicking on Home button. Page Author or Administrator can save the current zoom rate and view position as a home position.
+  (http://positlog.com/071219wG.html#id_spr2aizl)
+
+- Returning home position by pushing Home key was added.
+
+- Switching to birdview by pushing End key was added.
+
+- ... and many bugs were fixed.

@@ -1,0 +1,189 @@
+/* -----------------------------------------------
+  hatena_diary_contents.css
+  This is a CSS for HatenaDiary.pm
+ ----------------------------------------------- */
+
+div.hatena_diary_contents h2
+{
+	background-color: #606060;
+	padding: 4px;
+	font-size: 100%;  
+}
+
+div.hatena_diary_contents h3
+{
+	margin-left: -30px;
+	font-size: 100%;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.hatena_diary_contents h4
+{
+	margin-left: -40px;
+	font-size: 90%;
+	font-weight: bold;
+
+	border-left: 5px solid #5279E7;
+	border-bottom: 1px solid #5279E7;
+	padding: 0px 0.5em 0.1em 0.5em;
+}
+
+div.hatena_diary_contents .section
+{
+	margin-bottom:20px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+div.hatena_diary_contents div.footnote
+{
+	margin-bottom:5px;
+	padding-left: 40px;
+	padding-right: 50px;
+}
+
+
+div.hatena_diary_contents .title
+{
+	color: white;
+}
+
+div.hatena_diary_contents .date
+{
+	color: white;
+}
+
+div.hatena_diary_contents div.body
+{
+	padding-left: 10px;
+
+	padding-top: 10px;		
+	padding-bottom: 10px;		
+}
+
+div.hatena_diary_contents a:link
+{ 
+	color: green;
+}
+
+div.hatena_diary_contents a:visited
+{ 
+	color: maroon;
+}
+
+div.hatena_diary_contents a:visited.keyword
+{
+	color: black;
+}
+
+div.hatena_diary_contents a:link.keyword
+{
+	color: black;
+}
+
+div.hatena_diary_contents p
+{
+	font-size: 90%;
+	margin-bottom: 5px;
+}
+
+div.hatena_diary_contents ul
+{
+	font-size: 90%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+div.hatena_diary_contents li
+{
+	line-height: 1.6;
+	margin-left: -1em;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+
+}
+
+
+
+
+div.hatena_diary_contents .sectionfooter
+{
+	margin-top: 10px;
+}
+
+div.hatena_diary_contents div.hatena-asin-detail
+{
+	margin: 10px;
+	font-size:10pt;
+}
+
+div.hatena_diary_contents div.hatena-asin-detail p
+{
+	text-indent: 0em;
+	line-height: 150%;
+	font-size:10pt;
+}
+
+div.hatena_diary_contents div.hatena-asin-detail ul
+{
+	list-style-type: none;
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+	font-size:10pt;
+}
+
+div.hatena_diary_contents img.hatena-asin-detail-image
+{
+	float: left;
+	border: 1px solid gray;
+	border-color: #909090;
+	width: 60px;
+}
+
+div.hatena_diary_contents .hatena-fotolife
+{
+	border: 0px;
+	margin: 7px;
+}
+
+div.hatena_diary_contents img.photo
+{
+	float: left;
+	margin: 10px;
+	border: 0px;
+}
+
+div.hatena_diary_contents blockquote
+{
+	border: 1px solid gray;
+	background-color: white;
+
+	padding: 3px;	
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+
+/* bookmark count */
+a.bookmark-icon img
+{
+	border: none;
+}
+a.bookmark-count
+{
+	text-decoration: none;
+	border: none;
+}
+a.bookmark-count img
+{
+	text-decoration: none;
+	border: none;
+}

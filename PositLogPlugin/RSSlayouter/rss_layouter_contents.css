@@ -1,0 +1,26 @@
+/* -----------------------------------------------
+  rss_layouter_contents.css
+  This is a CSS for HatenaAntenna.pm
+ ----------------------------------------------- */
+
+div.rss_layouter_contents * .title
+{
+	font-size: 90%;
+	line-height: 1em;
+}
+
+div.rss_layouter_contents * .description
+{
+	font-size: 80%;
+	line-height: 1em;
+}
+
+div.rss_layouter_contents .frame
+{
+	border: 2px solid #fffcf8;
+	padding: 3px;
+}
+
+.spritedate{ 
+  color: #808080;
+}

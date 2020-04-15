@@ -1,0 +1,63 @@
+/* -----------------------------------------------
+  cocolog_contents.css
+  This is a CSS for cocolog.pm
+ ----------------------------------------------- */
+
+
+div.cocolog_contents a:link {
+	color: #006633;
+	}
+
+div.cocolog_contents a:visited {
+	color: #669966;
+	}
+
+div.cocolog_contents a:active {
+	color: #cc3333;
+	}
+
+div.cocolog_contents a:hover {
+	color: #cc3333;
+	}
+
+div.cocolog_contents h2
+{
+	background-color: #600000;
+	color: white;
+	padding: 5px;
+	font-size: 100%;
+}
+
+div.cocolog_contents h3
+{
+	background-color: #903030;
+	color: white;
+	padding: 5px;
+	font-size: 100%;
+}
+
+div.cocolog_contents p
+{
+	padding-left: 50px;
+	padding-right: 50px;	
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 90%;	
+}
+
+div.cocolog_contents .entry
+{
+	background-color: #ffffff;	
+}
+
+div.cocolog_contents .posted
+{
+	padding-left: 50px;	
+	padding-right: 50px;	
+	text-indent: 1em;
+	margin-bottom: 0px;
+	margin-top: 10px;
+	font-size: 90%;
+	background-color: #ffffff;	
+}
+

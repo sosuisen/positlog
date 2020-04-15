@@ -1,0 +1,45 @@
+The following changes are made to FCKeditor 2.5.1.
+(installed in POSITLOG_ROOT/system/fckeditor/*)
+
+Search comments by "hidekaz".
+
+- In fckconfig.js
+	Language is changed:
+	var _FileBrowserLanguage	= 'perl' ;	// asp | aspx | cfm | lasso | perl | php | py
+	var _QuickUploadLanguage	= 'perl' ;	// asp | aspx | cfm | lasso | perl | php | py
+
+- In connector.cgi, uploader.cgi
+	Security check are removed.
+  #!/usr/bin/env perl -> #!/usr/bin/perl
+	
+- In commands.pl, connector.cgi, io.pl, uploader.cgi
+	FileUpload is changed. 
+	"VirtualPath" and "$virtualPath" are added.
+
+- In io.pl
+  sub GetRootPath is fully modified.
+
+- In ja.js
+  FontFormats is changed:
+  FontFormats			: "標準 (P);書式付き;アドレス;見出し 1;見出し 2;見出し 3;見出し 4;見出し 5;見出し 6;標準 (DIV)",
+
+- In browser.html
+	"VirtualPath" is added.
+
+- In fck_image.js
+	Redo ResetSizes() if Safari misses getting width and height.
+ 	Commented out some alerts.
+
+- See also http://positlog.org/071212pG.html#id_spr5fxkr
+
+- Non-Perl scripts and related files are removed.
+
+- Smikey images are removed.
+
+- Skins are removed.
+
+- Sample files are removed.
+
+
+Other configulations are in POSITLOG_ROOT/system/fckmyconfig*.js and POSITLOG_ROOT/system/fckskins.
+

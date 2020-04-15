@@ -1,0 +1,48 @@
+==============================================================
+Updating PositLog from version 0.60 or 0.61b1 to version 0.61
+
+Hidekazu Kubota
+2008/03/05 ver 1.00
+==============================================================
+
+---------------------------------
+---------------------------------
+A. What's new in version 0.61
+---------------------------------
+---------------------------------
+
+See changelog061.txt.
+
+---------------------------------
+---------------------------------
+B. Updating
+---------------------------------
+---------------------------------
+
+---------------------------------
+(1) Backup
+---------------------------------
+ First, backup files in following directories.
+ - Page Data Directory ($datapath)
+ - admindata
+ - bgimages
+
+---------------------------------
+(2) Delete old version
+---------------------------------
+ 
+ Delete all the files and directories except 
+ Page Data Directory ($datapath), admindata, and bgimages.
+
+---------------------------------
+(3) Install 0.61
+---------------------------------
+
+ Install 0.61 according to install061.txt.
+
+ Take care that you can use existing directories for Page Data Directory ($datapath), admindata, and bgimages.
+
+ You need not upload and open createadmin.cgi.
+ You need not change the permission of the files in admindata directory.
+
+ You shoud clear the cache of your Web browser.

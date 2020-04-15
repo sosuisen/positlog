@@ -1,0 +1,274 @@
+===============================================================
+ PositLog Installation Manual
+
+ Copyright (c) 2006-2008 Hidekazu Kubota. All rights reserved.
+  <hidekaz@positlog.org>
+   http://positlog.com/
+
+ Change Log:
+
+ 2008-03-05 Version 0.61
+ 2008-02-21 Version 0.61b1
+ 2008-02-12 Version 0.6
+===============================================================
+
+--------------------------------------------------------
+--------------------------------------------------------
+1. Introduction
+--------------------------------------------------------
+--------------------------------------------------------
+
+This document describes the method for the installation of PositLog.
+
+If you update PositLog from version 0.6 or 0.61b1, please refer to ver061b1to061.txt.
+
+--------------------------------------------------------
+--------------------------------------------------------
+2. System Requirements
+--------------------------------------------------------
+--------------------------------------------------------
+
+ - Perl 5.8+
+
+ - PositLog does not officially support servers that use ScriptAlias. Using ScriptAlias implies that a particular directory is set aside for the CGI scripts. Some functions are not available on such servers, and the installation method for such cases is slightly different from the one described in this document. Please refer to scriptalias.txt.
+
+--------------------------------------------------------
+--------------------------------------------------------
+3. Check the path where Perl is installed.
+--------------------------------------------------------
+--------------------------------------------------------
+
+PositLog presumes that Perl is installed in the following path.
+
+ /usr/bin/perl
+
+If Perl is not installed in this directory, set its path in all the .cgi files.
+
+--------------------------------------------------------
+--------------------------------------------------------
+4. Installation Method
+--------------------------------------------------------
+--------------------------------------------------------
+
+Create a directory for PositLog on your Web space.
+For example, /var/www/html/positlog/.
+This directory is referred to as the PositLog Root Directory.
+
+It is recommended that only the PositLog files should be present in this directory.
+
+The URL corresponding to this directory is referred to as the PositLog Root URL.
+For example, html://xxx.com/positlog/.
+
+
+The permissions (644, 755, and 777) mentioned in this document imply the following.
+
+777: Set the permission for the CGI scripts so as to enable "write" access for it.
+755: Set the permission for the CGI scripts so as to enable "read/execute" access for it.
+644: Set the permission for the CGI scripts so as to enable "read" access for it.
+
+Please follow the instructions from the Internet Service Provider if you are using a Web hosting service.
+
+----------------------------------------
+(1) Extract Archive
+----------------------------------------
+
+Extract the zipped archive of PositLog.
+
+----------------------------------------
+(2) Set PositLogConfig.pm
+----------------------------------------
+
+Open document/English/PositLogConfig.pm and set the Root URL ($rooturl).
+
+This is the minimum amount of configuration required.
+If required, additional configurations can be set.
+
+Copy (or upload) PositLogConfig.pm to the PositLog Root Directory.
+
+----------------------------------------
+(3) Create Essential Directories
+----------------------------------------
+
+First, create two essential directories in the PositLog Root Directory as follows:
+
+ admindata (777)
+ bgimages (777)
+
+Next, create Page Data Directory ($datapath). The path is configured in PositLogConfig.pm. The default path is ./pages/.
+
+If the default settings are used, the file tree shown in the diagram below will be displayed.
+
+ PositLog Root Directory (755)
+ |- admindata (777)
+ |- bgimages (777)
+ |- pages (777)
+ |
+ |- PositLogConfig.pm (644) 
+
+----------------------------------------
+(4) Copy Files
+----------------------------------------
+ 
+Copy (or upload) all the files and directories in the extracted directory
+(except the document directory, htaccess, htaccess_admindata, and htaccess_mod_rewrite)
+to the PositLog Root Directory.
+
+Set the permissions of the directories, files, and .cgi files to 755, 644, and 755, respectively.
+
+An exception is the case in which the permission of 
+ system/fckeditor/editor/filemanager/connectors/perl/
+is set to 777.
+
+The locations of the .cgi files are shown in the diagram below.
+
+
+ PositLog Root Directory/
+ |
+ |- admintools/
+ |  |- admin.cgi
+ |  |- adminnavi.cgi
+ |  |- admintop.cgi
+ |  |- pagemanager.cgi
+ |  |- pageproperty.cgi
+ |  |- positlogadmin.cgi
+ |  |- usermanager.cgi
+ |  |- userproperty.cgi
+ |
+ |- system/
+ |  |- fckeditor/
+ |      |- editor/
+ |          |- filemanager/
+ |              |- connectors/
+ |                  |- perl/ (777) 
+ |                      |- connector.cgi
+ |                      |- upload.cgi
+ |
+ |- clearCache.cgi
+ |- createadmin.cgi
+ |- createPage.cgi
+ |- deleteSprite.cgi
+ |- fileloader.cgi
+ |- fileupload.cgi
+ |- groupSprites.cgi
+ |- pagerss.cgi
+ |- positlog.cgi
+ |- recentcontents.cgi
+ |- savePageProperties.cgi
+ |- saveSprite.cgi
+ |- saveStyles.cgi
+ |- tag.cgi
+ |- ungroupSprites.cgi
+ |- unlockPassword.cgi
+
+
+-----------------------------------------------------
+(5) Set .htaccess under the admindata directory
+-----------------------------------------------------
+
+The archive includes .htaccess that should be placed under the admindata directory. Change the file name from htaccess_admindata to .htaccess, and place it under the admindata directory.
+
+Note that the Windows File Explorer cannot be used to name a file as .htaccess.
+Change the name using an FTP software.
+
+PositLog Root Directory (755)
+ |- admindata (777)
+ |   |- .htaccess (644)
+
+-----------------------------------------------------
+(6) Set .htaccess under the PositLog Root Directory
+-----------------------------------------------------
+
+The archive also includes the sample files of .htaccess that should be placed under the PositLog Root Directory. They are htaccess and htaccess_mod_rewrite. Change the name of one of them to .htaccess, and place it under the PositLog Root Directory.
+
+PositLog, together with these .htaccess files, does not function under some server settings. In such cases, change the settings in .htaccess or delete it from the server.
+
+
+(a) htaccess 
+
+This is a basic sample file.
+
+- Options -Indexes
+
+ This line hides the file list of a directory when a URL that maps to the directory is requested. 
+ (See http://httpd.apache.org/docs/2.0/en/mod/core.html#options)
+
+- DirectoryIndex positlog.cgi index.html
+
+ This line returns positlog.cgi when a PositLog Root URL is requested.
+ If the homepage of PositLog is set by using the PositLog Administration Tools,
+ it returns the homepage.
+ (See http://positlog.com/071208Yf.html#id_spr6eaob to set the homepage)
+
+- AddHandler cgi-script .cgi .pm .dat .spr
+
+ This line hides the inner data structures of PositLog (.dat and .spr files) from HTTP access.
+
+
+(b) htaccess_mod_rewrite
+
+This is a RewriteEngine sample file.
+
+First, check if mod_write is available on the Web server.
+If available, set
+  $mod_rewrite = 1;
+in PositLogConfig.pm, and use this sample file.
+
+The settings in this file enables the replacing of URLs such as
+  positlog.cgi?load=000000XX
+with 
+  000000XX.html
+
+It also enables the rel-tag microformats.
+(http://microformats.org/wiki/rel-tag)
+
+
+----------------------------------------
+(7) Create Administrator
+----------------------------------------
+
+Open createadmin.cgi in the Web browser.
+Enter the user id and password of the Administrator (admin), and click the [Create] button.
+
+Then, delete createadmin.cgi from the Web server.
+
+A file named key.dat has thus been created under the admindata directory.
+This is the authentication data of the Administrator.
+
+If you wish to change the user id or password of the Administrator, 
+delete key.dat and run createadmin.cgi again.
+
+
+--------------------------------------------------------
+--------------------------------------------------------
+5. Start PositLog
+--------------------------------------------------------
+--------------------------------------------------------
+
+----------------------------------------
+(1) Login to Administration Tools
+----------------------------------------
+
+Open admintools/admin.cgi in the Web browser.
+Enter the user id and password of the Administrator in the login screen,
+and click the [Login] button.
+
+Note:
+Temporary cookies should be available on the Web browser in order to enable login.
+
+----------------------------------------
+(2) Create New Page
+----------------------------------------
+
+First, create a new page.
+The [Create this page] button is present on the first page of the Administration Tools.
+(http://positlog.com/071208sA.html)
+
+Enter the new page name into the field and click the [Create this page] button.
+
+The new page is added to the page list.
+Open the "edit" link to edit the new page.
+Open the "open" link to browse it.
+(http://positlog.com/071208Yf.html#id_spr9esau)
+
+Please consult the online manual for further detailed information.
+(http://positlog.com/071208Rq.html)

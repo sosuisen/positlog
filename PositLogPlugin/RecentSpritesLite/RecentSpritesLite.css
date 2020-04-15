@@ -1,0 +1,19 @@
+.recentspritelite_contents ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-position: inside;
+}
+
+.recentspritelite_line1 {
+  background-color: #f0f0f0;
+  padding: 3px;
+}
+
+.recentspritelite_line2 {
+  background-color: #ffffff;
+  padding: 3px;
+}
+
+.recentspritelite_body {
+	margin-left: 1em;
+}
