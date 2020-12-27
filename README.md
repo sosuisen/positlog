@@ -1,5 +1,5 @@
 # positlog
-## This is outmoded project in 2008, but it will be updated soon.
+## This is outmoded project in 2008
 
 PositLog is an excellent open source platform for building custom-made websites. It enables you to write text, draw pictures, and paste photos and any html code anywhere on draggable and zoomable web pages. It also enables to manage content by using web standard technologies (RSS, permalink, tags), groupware functions, and extensive plug-ins.
 
